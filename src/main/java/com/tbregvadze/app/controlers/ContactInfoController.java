@@ -39,7 +39,7 @@ public class ContactInfoController {
 
     @DeleteMapping("/{contactInfoId}")
     @SecurityRequirement(name = "Bearer Authentication")
-    public ResponseEntity<Response> deleteContactInfo(@PathVariable UUID contactInfoId) {
+    public ResponseEntity<Response> deleteContactInfo(@PathVariable @RequestParam(name = "contactInfoId", required = true) UUID contactInfoId) {
         return ResponseEntity.ok(contactInfoService.deleteContactInfo(contactInfoId));
     }
 
