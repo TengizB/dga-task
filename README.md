@@ -8,6 +8,19 @@
 # PROJECT REQUIREMENTS
   - Java version 17
   - Gradle-8.3
+  - Postgresql (Database must exist on project execution for test data to be generated of disable this feature in             application.properties spring.jpa.defer-datasource-initialization=false)
+    
+# PROJECT FEATURES
+  - JWT authentication
+  - Spring security by roles
+  - Unit tests for all controllers
+  - Swagger (http://localhost:8080/swagger-ui/index.html)
+    - Authentication in swagger required for most services
+  - CRUD operation for Users
+  - CRUD operations for ContactInfo
+  - Search with paging by User firstname, lastname and contact info using criteria builder
+  - H2 database for tests
+  - Test data and schema (data.sql, schema.sql)
 
 # CONFIGURATION
   - Default admin user:
